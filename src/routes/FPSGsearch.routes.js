@@ -9,7 +9,7 @@ export default function FPSGSearchRoutes() {
     return (
         <Stack.Navigator
             initialRouteName="SearchMenu"
-            screenOptions={{ headerShown: false, headerTintColor: 'white', }}
+            screenOptions={{ headerShown: false }}
         >
             <Stack.Screen name="SearchMenu" component={FPSGSearchMenu} options={{ animation: 'none' }} />
             <Stack.Screen name="Search" component={FPSGSearch} options={{ animation: 'none' }} />

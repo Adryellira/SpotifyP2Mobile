@@ -23,9 +23,6 @@ export default function FPSGSearch() {
         }
     };
 
-
-
-
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <SafeAreaView style={styles.container} >
@@ -52,7 +49,8 @@ export default function FPSGSearch() {
                             <Text style={{ color: 'rgba(255, 255, 255, 0.7)', fontWeight: '600', fontSize: 17 }}>Cancelar</Text>
                         </TouchableOpacity>
                     </View>
-                    <ScrollView horizontal={true} showsVerticalScrollIndicator={false} style={{ paddingVertical: 9, paddingHorizontal: 18 }}>
+
+                    <ScrollView horizontal={true} showsVerticalScrollIndicator={false} overScrollMode='never' style={{ paddingVertical: 12, paddingHorizontal: 18 }}>
                         <View style={{ backgroundColor: '#16833A', padding: 5, paddingHorizontal: 16, borderRadius: 100, marginRight: 9, borderWidth: 1, borderColor: '#27C360' }}>
                             <Text style={styles.textFilter}>Melhores resultados</Text>
                         </View>
@@ -87,8 +85,9 @@ export default function FPSGSearch() {
                         data={filteredMusicList}
                         style={{ marginTop: 9 }}
                         keyExtractor={(item) => item.id}
-                        renderItem={({ item, query }) => (
-
+                        overScrollMode='never'
+                        showsVerticalScrollIndicator={false}
+                        renderItem={({ item }) => (
                             <TouchableHighlight onPress={() => console.log('Apertado')}>
                                 <View style={styles.itemContainer}>
                                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -105,7 +104,6 @@ export default function FPSGSearch() {
                                     <Entypo name="chevron-thin-right" size={21} color="#A5A4A5" />
                                 </View>
                             </TouchableHighlight>
-
                         )}
                     />
                 )}

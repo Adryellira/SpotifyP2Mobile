@@ -3,8 +3,10 @@ import { View, Text, SafeAreaView, StyleSheet, TouchableHighlight, Image } from 
 import { useNavigation } from "@react-navigation/native";
 import { Entypo } from '@expo/vector-icons';
 
-export default function FPSGSettings() {
+export default function FPSGSettings({route}) {
     const navigation = useNavigation();
+    const { userName } = route.params || {userName: 'Adryel Lira'};
+    
 
     return (
         <SafeAreaView style={styles.container}>
@@ -16,7 +18,7 @@ export default function FPSGSettings() {
                          style={{ width: 70, height: 70, borderRadius: 35 }}
                         />
                         <View style={{ marginLeft: 15, alignSelf: 'flex-start' }}>
-                            <Text style={{ fontSize: 28, fontWeight: 'bold', color: 'white' }}>Adryel Lira</Text>
+                            <Text style={{ fontSize: 28, fontWeight: 'bold', color: 'white' }}>{userName}</Text>
                             <Text style={{ color: '#A5A4A5', marginTop: 5 }}>Ver perfil</Text>
                         </View>
                     </View>

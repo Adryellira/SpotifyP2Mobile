@@ -8,7 +8,7 @@ export default function FPSGSearchMenu() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView>
+            <ScrollView overScrollMode='never' showsVerticalScrollIndicator={false}>
                 <View style={{ marginTop: StatusBar.currentHeight + 18, flexDirection: 'row', alignItems: 'center' }}>
                     <Image
                         source={require('../../assets/profile.jpg')}

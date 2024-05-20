@@ -24,7 +24,12 @@ export default function FPSGProfile() {
                 end={{ x: 0, y: 0 }}
                 style={styles.background}
             >
-                <AntDesign name="ellipsis1" size={26} color="white" style={{ marginTop: StatusBar.currentHeight, alignSelf: 'flex-end' }} />
+                <View style={{ flexDirection: 'row', marginTop: StatusBar.currentHeight, justifyContent: 'space-between' }}>
+                    <Pressable onPress={() => navigation.navigate('Settings', { userName: name })}>
+                        <AntDesign name="arrowleft" size={26} color="white" />
+                    </Pressable>
+                    <AntDesign name="ellipsis1" size={26} color="white" />
+                </View>
 
                 <View style={{ alignSelf: 'center', alignItems: 'center', width: '100%', marginBottom: 25 }}>
                     <Image
@@ -43,7 +48,7 @@ export default function FPSGProfile() {
                         <Text style={{ color: '#A5A4A5', fontWeight: '600' }}>SEGUIDORES</Text>
                     </View>
                     <View style={styles.follow}>
-                        <Text style={{ color: 'white', fontWeight: '700' }}>76</Text>
+                        <Text style={{ color: 'white', fontWeight: '700' }}>53</Text>
                         <Text style={{ color: '#A5A4A5', fontWeight: '600' }}>SEGUIDORES</Text>
                     </View>
                 </View>
@@ -55,11 +60,11 @@ export default function FPSGProfile() {
                 <View style={styles.options}>
                     <View style={{ flexDirection: 'row' }}>
                         <Image
-                            source={require('../../assets/Home/Head/i1.png')}
+                            source={require('../../assets/Musics/clocks.jpeg')}
                             style={styles.box}
                         />
                         <View style={styles.boxName}>
-                            <Text style={styles.title}>Trabalho</Text>
+                            <Text style={styles.title}></Text>
                             <Text style={styles.likes}>0 curtidas</Text>
                         </View>
                     </View>
@@ -75,7 +80,7 @@ export default function FPSGProfile() {
                             style={styles.box}
                         />
                         <View style={styles.boxName}>
-                            <Text style={styles.title}>Trabalho</Text>
+                            <Text style={styles.title}></Text>
                             <Text style={styles.likes}>0 curtidas</Text>
                         </View>
                     </View>
@@ -87,11 +92,11 @@ export default function FPSGProfile() {
                 <View style={styles.options}>
                     <View style={{ flexDirection: 'row' }}>
                         <Image
-                            source={require('../../assets/Home/Head/i1.png')}
+                            source={require('../../assets/Musics/stressedout.jpeg')}
                             style={styles.box}
                         />
                         <View style={styles.boxName}>
-                            <Text style={styles.title}>Trabalho</Text>
+                            <Text style={styles.title}>Best</Text>
                             <Text style={styles.likes}>0 curtidas</Text>
                         </View>
                     </View>
@@ -150,7 +155,7 @@ const styles = StyleSheet.create({
     },
     background: {
         width: '100%',
-        height: '50%',
+        height: '55%',
         padding: 18,
         justifyContent: 'space-between'
     },
